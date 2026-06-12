@@ -73,13 +73,19 @@ from{transform:translateY(-100px)}
 to{transform:translateY(110vh)}
 }
 
-.hug-bear{
-    font-size:100px;
+.virtual-hug{
     margin-bottom:20px;
+}
 
-    animation:
-        floatBear 3s ease-in-out infinite,
-        glowBear 2s ease-in-out infinite;
+.virtual-hug img{
+    width:min(320px,80vw);
+    border-radius:20px;
+
+    animation:floatHug 3s ease-in-out infinite;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,.4),
+        0 0 40px rgba(255,192,203,.4);
 }
 
 @keyframes floatBear{
@@ -185,12 +191,12 @@ so please, i beg you bee. please stay with me, aku tau aku yg nyaranin keputusan
 <div id="p4" class="page hidden">
 <div class="hearts" id="hearts"></div>
 
-<div class="hug-bear">
-🧸🫶🧸
+<div class="love-language">
+    <img src="love-language.gif" alt="Virtual Hug">
 </div>
 
 <h1>makasih sayang udah mau bacaaa</h1>
-<p>I love you ❤️<br>I miss you so bad<br>I'm sorry<br>Thank you for staying.</p>
+<p>I love you ❤️<br>I miss you so bad<br>I'm sorry<br></p>
 </div>
 
 <script>
