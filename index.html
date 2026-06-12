@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;overflow:hidden}
+.page{
+position:absolute;inset:0;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+text-align:center;padding:20px;color:white;
+}
+.hidden{display:none}
+
+#p1{
+background:linear-gradient(135deg,#ffd1e6,#ff9bc5);
+}
+#p2,#p3,#p4{
+background:linear-gradient(90deg,#f48fb1 0%,#ee8ddc 45%,#c17cff 100%);
+}
+
+h1,h2,p{margin:10px 0;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+button{
+padding:14px 26px;border:none;border-radius:999px;
+cursor:pointer;font-size:18px;margin:10px;
+}
+.yes{background:white;color:#ff4f8b}
+.no{background:#ff4f8b;color:white;position:relative}
+.next{background:white;color:#b24dff}
+
+.bouquet{
+width:min(80vw,500px);
+animation:rise 1.8s ease,sway 4s infinite ease-in-out;
+filter:drop-shadow(0 0 15px rgba(255,255,255,.5));
+}
+@keyframes rise{
+from{transform:translateY(300px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
+@keyframes sway{
+0%,100%{transform:rotate(-2deg)}
+50%{transform:rotate(2deg)}
+}
+
+.note{
+background:rgba(255,255,255,.15);
+padding:16px;border-radius:20px;
+backdrop-filter:blur(8px);
+max-width:700px;
+}
+
+.envelope{position:relative;width:280px;height:200px;cursor:pointer}
+.mail-top{transform-origin:top;transition:1s}
+.open .mail-top{transform:rotateX(180deg)}
+.letter{
+position:absolute;left:20px;right:20px;top:35px;
+background:white;color:#444;padding:15px;border-radius:10px;
+opacity:0;transition:1s;transform:translateY(40px);
+}
+.open .letter{
+opacity:1;transform:translateY(-110px);
+}
+
+.hearts{position:absolute;inset:0;overflow:hidden}
+.heart{
+position:absolute;animation:fall linear infinite;
+}
+@keyframes fall{
+from{transform:translateY(-100px)}
+to{transform:translateY(110vh)}
+}
+
+.hug-bear{
+    font-size:100px;
+    margin-bottom:20px;
+
+    animation:
+        floatBear 3s ease-in-out infinite,
+        glowBear 2s ease-in-out infinite;
+}
+
+@keyframes floatBear{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes glowBear{
+    0%,100%{
+        filter:drop-shadow(0 0 10px pink);
+    }
+
+    50%{
+        filter:drop-shadow(0 0 25px white);
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="p1" class="page">
+<h1>Maafin aku ya sayang? 🥺</h1>
+<div>
+<button id="yesBtn" class="yes">iyaa sayangku ryu ku yg ganteng💖</button>
+<button id="noBtn" class="no">ga 😤</button>
+</div>
+</div>
+
+<div id="p2" class="page hidden">
+<h2>for my beautiful celcia🌷</h2>
+
+<svg class="bouquet" viewBox="0 0 500 600">
+<line x1="250" y1="250" x2="250" y2="500" stroke="#4caf50" stroke-width="8"/>
+<line x1="190" y1="280" x2="250" y2="470" stroke="#4caf50" stroke-width="6"/>
+<line x1="310" y1="280" x2="250" y2="470" stroke="#4caf50" stroke-width="6"/>
+
+<g>
+<ellipse cx="250" cy="170" rx="45" ry="95" fill="#ffc0cb"/>
+<ellipse cx="250" cy="170" rx="45" ry="95" fill="#ffb6c1" transform="rotate(60 250 170)"/>
+<ellipse cx="250" cy="170" rx="45" ry="95" fill="#ffb6c1" transform="rotate(-60 250 170)"/>
+<circle cx="250" cy="170" r="20" fill="#ff69b4"/>
+</g>
+
+<g>
+<ellipse cx="160" cy="270" rx="40" ry="85" fill="#ffc0cb" transform="rotate(20 160 270)"/>
+<ellipse cx="160" cy="270" rx="40" ry="85" fill="#ffb6c1" transform="rotate(80 160 270)"/>
+<ellipse cx="160" cy="270" rx="40" ry="85" fill="#ffb6c1" transform="rotate(-40 160 270)"/>
+<circle cx="160" cy="270" r="16" fill="#ff69b4"/>
+</g>
+
+<g>
+<ellipse cx="340" cy="270" rx="40" ry="85" fill="#ffc0cb" transform="rotate(-20 340 270)"/>
+<ellipse cx="340" cy="270" rx="40" ry="85" fill="#ffb6c1" transform="rotate(40 340 270)"/>
+<ellipse cx="340" cy="270" rx="40" ry="85" fill="#ffb6c1" transform="rotate(-80 340 270)"/>
+<circle cx="340" cy="270" r="16" fill="#ff69b4"/>
+</g>
+
+<ellipse cx="170" cy="390" rx="25" ry="90" fill="#5faa46" transform="rotate(-55 170 390)"/>
+<ellipse cx="330" cy="390" rx="25" ry="90" fill="#5faa46" transform="rotate(55 330 390)"/>
+
+<path d="M220 470 C170 430 160 510 220 520" fill="#c792ea"/>
+<path d="M280 470 C330 430 340 510 280 520" fill="#c792ea"/>
+<circle cx="250" cy="470" r="20" fill="#9c4dcc"/>
+</svg>
+
+<div class="note">
+<p>aku tau aku banyak bikin kesalahan, aku juga bukan pasangan yg selalu baik buat kamu pastinya. aku tau sayang dan cinta aja ga cukup, aku bener bener minta maaf celcia buat semuanya, buat kesalahan ku.</p>
+<p>kaya yg kamu bilang waktu itu, aku mau kita grow up bareng-bareng bee. aku mau bisa jadi lebih baik terus kedepannya, aku sayang kamu celcia, sayang banget.</p>
+<p>maaf yaa sayang, maaf buat semuanya. maaf buat sifat cemburu ku yg besar ngendaliin diri ku sendiri. aku harap kamu mau maafin aku</p>
+</div>
+
+<button class="next" onclick="showPage(3)">Berikutnya ➜</button>
+</div>
+
+<div id="p3" class="page hidden">
+<h2>for you, my sweetheart.</h2>
+<div id="env" class="envelope">
+<svg width="280" height="200">
+<polygon class="mail-top" points="20,20 140,100 260,20" fill="#ff8fb6"/>
+<rect x="20" y="20" width="240" height="150" fill="#ffc6db"/>
+</svg>
+<div class="letter">
+Hai Sayang,<br><br>
+hehe disini aku mau minta maaf lagi sebenernya tapi takut kamu muak juga, jadi aku mau bilang makasih aja ke kamu biar kita sama sama terus eak. but im serious, i wanna say thank you love, karna kamu disini sama aku.<br><br>
+so please, i beg you bee. please stay with me, aku tau aku yg nyaranin keputusan itu tp klo jujur aku juga berat buat nyaranin itu. aku selalu sayang kamu, aku selalu berharap yg terbaik buat kita celcia. i love you ❤️
+</div>
+</div>
+<div style="margin-top:320px; position:relative; z-index:9999;">
+  <button
+  class="next"
+  style="display:none"
+  onclick="showPage(4)">
+  Peluk Virtual 🤍
+  </button>
+</div>
+</div>
+
+<div id="p4" class="page hidden">
+<div class="hearts" id="hearts"></div>
+
+<div class="hug-bear">
+🧸🫶🧸
+</div>
+
+<h1>makasih sayang udah mau bacaaa</h1>
+<p>I love you ❤️<br>I miss you so bad<br>I'm sorry<br>Thank you for staying.</p>
+</div>
+
+<script>
+let c=0;
+const noBtn=document.getElementById('noBtn');
+const yesBtn=document.getElementById('yesBtn');
+
+noBtn.onclick=()=>{
+c++;
+if(c<=3){
+noBtn.style.transform=`translate(${Math.random()*400-200}px,${Math.random()*200-100}px)`;
+yesBtn.style.transform=`scale(${1+c*0.2})`;
+}else if(c===4){
+noBtn.style.transform='scale(.4)';
+}else{
+noBtn.style.display='none';
+}
+};
+
+yesBtn.onclick=()=>showPage(2);
+
+function showPage(n){
+document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));
+document.getElementById('p'+n).classList.remove('hidden');
+if(n===4) hearts();
+}
+
+document.getElementById('env').onclick=()=>{
+
+const env=document.getElementById('env');
+
+env.classList.toggle('open');
+
+document.querySelector('#p3 .next').style.display='block';
+
+}
+
+function hearts(){
+const h=document.getElementById('hearts');
+for(let i=0;i<35;i++){
+let d=document.createElement('div');
+d.className='heart';
+d.innerHTML='❤️';
+d.style.left=Math.random()*100+'%';
+d.style.animationDuration=(4+Math.random()*5)+'s';
+h.appendChild(d);
+}
+}
+</script>
+
+</body>
+</html>
